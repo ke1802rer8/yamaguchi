@@ -44,8 +44,7 @@
           
            let bodyAnimation = () => {
                 const tlMessageBtn = gsap.timeline({ defaults: {duration: 1}, repeat: -1});
-                tlMessageBtn.to('.img__body', {  y: 0})
-                    .to('.img__body', { y: 10})
+                tlMessageBtn.to('.img__body', {  y: 10})
                     .to('.img__body', { y: 0});
                 return tlMessageBtn;
               
