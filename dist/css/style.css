@@ -1,31 +1,3 @@
-@font-face {
-  font-family: BanderaProHeavy;
-  font-display: swap;
-  src: url("../fonts/BanderaProHeavy.woff") format("woff"), url("../fonts/BanderaProHeavy.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: BanderaProLight;
-  font-display: swap;
-  src: url("../fonts/BanderaProLight.woff") format("woff"), url("../fonts/BanderaProLight.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: UF1;
-  font-display: swap;
-  src: url("../fonts/UF1.woff") format("woff"), url("../fonts/UF1.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("woff"), url("../fonts/UF1.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -388,6 +360,7 @@ textarea {
 .page__font {
   font-size: 4.2rem;
   font-weight: 900;
+  font-family: "Ubuntu", sans-serif;
 }
 .page__font p {
   padding-top: 2.5rem;
@@ -401,12 +374,14 @@ textarea {
   padding-bottom: 5rem;
   line-height: 1.3;
   max-width: 33rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .page__description {
   font-size: 2.2rem;
   line-height: 1.7;
   padding-bottom: 3rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .page__block-img {
@@ -434,7 +409,7 @@ textarea {
   background-position-y: 0%;
   background-repeat: no-repeat;
   animation-name: body-animation;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -442,10 +417,12 @@ textarea {
   0% {
     background-position-y: 1000%;
     -webkit-background-size: 10%;
+    background-size: 10%;
   }
   100% {
-    background-position-y: 100%;
+    -webkit-background-position-y: 100%;
     -webkit-background-size: 100%;
+    background-size: 100%;
   }
 }
 .img__footer img {
@@ -454,7 +431,7 @@ textarea {
   max-width: 14rem;
   width: 100%;
   animation-name: ellips-animation;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   z-index: 6;
 }
@@ -479,6 +456,10 @@ textarea {
 .page__img img {
   max-width: 75.2rem;
   width: 100%;
+}
+
+.display__model-block {
+  display: none;
 }
 
 @media (max-width: 1721px) {
@@ -530,6 +511,12 @@ textarea {
     line-height: 1.3;
     max-width: 21rem;
   }
+  .img__body {
+    height: 105%;
+  }
+  .img__footer {
+    top: -5rem;
+  }
 }
 @media (max-width: 1364px) {
   .page__block-text {
@@ -546,7 +533,7 @@ textarea {
     padding-left: 10rem;
   }
   .page__img {
-    top: 54rem;
+    top: 51rem;
     bottom: 0;
     max-width: 58.2rem;
     padding-right: 13rem;
@@ -560,12 +547,20 @@ textarea {
   .page__title {
     max-width: 44rem;
   }
+  .container {
+    padding: 3rem 7.2rem;
+  }
 }
 @media (max-width: 1075px) {
   .page__block-img {
     max-width: 21.5rem;
     height: 69rem;
     padding-left: 5rem;
+  }
+  .container {
+    max-width: 149rem;
+    padding: 1rem 7.2rem;
+    margin: 0 auto;
   }
   .page__img {
     top: 54rem;
@@ -578,7 +573,7 @@ textarea {
   .page__block-img {
     max-width: 21.5rem;
     height: 69rem;
-    padding-left: 5rem;
+    padding-left: 0rem;
     margin: 0 auto;
   }
   .page__img {
@@ -602,6 +597,13 @@ textarea {
   }
   .container {
     padding: 0rem 7.2rem;
+  }
+  .display__model-block {
+    display: block;
+    padding-top: 8rem;
+  }
+  .display__model-none {
+    display: none;
   }
 }
 @media (max-width: 750px) {
@@ -635,8 +637,6 @@ textarea {
   .page__font {
     font-size: 2.7rem;
   }
-}
-@media (max-width: 375px) {
   .page__block-text {
     max-width: 149rem;
     width: 100%;
@@ -653,6 +653,11 @@ textarea {
   }
   .container {
     padding: 0rem 1.5rem;
+  }
+}
+@media (max-width: 340px) {
+  .page__font p {
+    font-size: 2.6rem;
   }
 }
 html {

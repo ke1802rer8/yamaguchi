@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        
     <title>Yamaguchi</title>
 </head>
     <body>
@@ -17,7 +20,7 @@
                         Voice Control </div>
                     <div class="page__description">Вы можете управлять программами массажа или самим креслом с помощью голосовых команд, приведённых ниже. Коснитесь кратковременно кнопки голосового управления, расположенной на левом подлокотнике, для запуска сеанса голосового управления. 
                         Произнесите одну из доступных команд. Если произнесённая команда распознана, вы услышите ответ и кресло приступит к выполнению запроса.</div>
-                    
+                    <div class="page__font display__model-none">СКАЖИ: <br><p>«ОКЕЙ, ЯМАГУЧИ»</p></br></div>
                     
                 </div>
                 <div class="page__block-img">
@@ -27,7 +30,7 @@
                 <div class="page__img">
                     <img src="img/telephone.png" alt="">
                 </div>
-                <div class="page__font">СКАЖИ: <br><p>«ОКЕЙ, ЯМАГУЧИ»</p></br></div>
+                <div class="page__font display__model-block">СКАЖИ: <br><p>«ОКЕЙ, ЯМАГУЧИ»</p></br></div>
             </div>
         </div>
         <footer></footer>
@@ -40,17 +43,14 @@
 
           
            let bodyAnimation = () => {
-                const tlMessageBtn = gsap.timeline({defaults: {duration: 1}, repeat: -1});
-                tlMessageBtn.to('.img__body', {  y: -5})
-                    .to('.img__body', { y: 4})
-                    .to('.img__body', {  y: -5})
-                    .to('.img__body', { y: 6})
-                    .to('.img__body', { y: -6})
+                const tlMessageBtn = gsap.timeline({ defaults: {duration: 1}, repeat: -1});
+                tlMessageBtn.to('.img__body', {  y: 0})
+                    .to('.img__body', { y: 10})
                     .to('.img__body', { y: 0});
                 return tlMessageBtn;
               
            }
-           const tl = gsap.timeline({defaults: {duration: 1}});
+           const tl = gsap.timeline({defaults: {duration: 5}});
            tl.add(bodyAnimation);
        </script>
         <script src="js/app.min.js"></script>
