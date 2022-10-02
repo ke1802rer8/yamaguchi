@@ -342,7 +342,7 @@ textarea {
 
 .container {
   max-width: 149rem;
-  padding: 6rem 7.2rem;
+  padding: 5rem 7.2rem;
   margin: 0 auto;
 }
 
@@ -360,7 +360,6 @@ textarea {
 .page__font {
   font-size: 4.2rem;
   font-weight: 900;
-  font-family: "Ubuntu", sans-serif;
 }
 .page__font p {
   padding-top: 2.5rem;
@@ -509,10 +508,15 @@ textarea {
     font-size: 3.6rem;
     padding-bottom: 4rem;
     line-height: 1.3;
-    max-width: 21rem;
+    max-width: 24rem;
+  }
+  .container {
+    max-width: 149rem;
+    padding: 3rem 7.2rem;
+    margin: 0 auto;
   }
   .img__body {
-    height: 105%;
+    height: 101%;
   }
   .img__footer {
     top: -5rem;
@@ -550,6 +554,9 @@ textarea {
   .container {
     padding: 3rem 7.2rem;
   }
+  .img__body {
+    height: 105%;
+  }
 }
 @media (max-width: 1075px) {
   .page__block-img {
@@ -581,6 +588,7 @@ textarea {
     top: 0;
     padding-top: 7rem;
     margin: 0 auto;
+    padding-right: 0rem;
   }
   .page__font {
     font-size: 4.3rem;
@@ -631,11 +639,11 @@ textarea {
   }
   .page__font p {
     padding-top: 2.5rem;
-    font-size: 2.9rem;
+    font-size: 3rem;
     padding-left: 2rem;
   }
   .page__font {
-    font-size: 2.7rem;
+    font-size: 2.9rem;
   }
   .page__block-text {
     max-width: 149rem;
@@ -645,6 +653,16 @@ textarea {
   }
   .container {
     padding: 0rem 1.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .page__block-img {
+    max-width: 18.5rem;
+    height: 69rem;
+    padding-left: 0rem;
+  }
+  .img__body {
+    height: 100%;
   }
 }
 @media (max-width: 350px) {
@@ -668,5 +686,5 @@ body {
   background-color: rgb(24, 24, 24);
   font-size: 2.5rem;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Montserrat";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
